@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 04 // Visibility: Redaction</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #fff; 
+            font-family: "Courier New", monospace; 
+            padding: 40px; 
+        }
+
+        .back-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #fff; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+        }
+        
+        .audit-header { 
+            border-bottom: 2px solid #fff; 
+            margin-bottom: 40px; 
+            padding-bottom: 10px; 
+            margin-top: 20px;
+        }
+        
+        .audit-header h2 { 
+            color: #fff; 
+            margin: 0; 
+            letter-spacing: 4px;
+            font-size: 24px;
+        }
+
+        .metric-id { 
+            float: right; 
+            font-weight: bold; 
+            border: 1px solid #fff; 
+            padding: 5px; 
+            color: #fff; 
+            font-size: 10px;
+        }
+
+        .hint { 
+            text-align: center; 
+            color: #fff; 
+            font-size: 10px; 
+            letter-spacing: 2px; 
+            margin-bottom: 30px; 
+            text-transform: uppercase; 
+        }
+
+        .poem-content {
+            white-space: pre-line;
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 18px; 
+            line-height: 2.2;
+        }
+
+        .bury {
+            text-decoration: line-through;
+            text-decoration-color: #222;
+            text-decoration-thickness: 1.2em;
+            color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline;
+        }
+
+        /* The words that survive the burial */
+        .seed {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none !important;
+            color: #fff !important;
+            /* Added a slight glow to make them look like they are blooming */
+            text-shadow: 0 0 8px rgba(255,255,255,0.3);
+        }
+
+        .bury:hover {
+            text-decoration-color: #444;
+        }
+
+        .revealed {
+            text-decoration-color: transparent !important;
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Return to Audit Log</a>
+    
+    <div class="audit-header">
+        <span class="metric-id">METRIC: VISIBILITY // UNIT: 04</span>
+        <h2>REDACTION</h2>
+    </div>
+
+    <p class="hint">[ ACTION: CLICK TO UNEARTH ]</p>
+
+    <main class="poem-content">
+<span class="bury" onclick="this.classList.toggle('revealed')">i have this productivity anxiety
+that everyone else is working harder than me
+and i’m going to be left behind
+cause i’m not working fast enough or long enough
+and i’m wasting my time</span>
+
+<span class="bury" onclick="this.classList.toggle('revealed')">i don’t sit down to have breakfast
+i take it to go
+i call my mother when i’m free
+otherwise it takes too long to have a conversation</span>
+
+<span class="bury" onclick="this.classList.toggle('revealed')">i put off everything that
+won’t bring me closer to my </span><span class="seed">dreams</span>
+<span class="bury" onclick="this.classList.toggle('revealed')">as if the things i’m putting off
+are not the </span><span class="seed">dream</span><span class="bury" onclick="this.classList.toggle('revealed')"> themselves</span>
+
+<span class="bury" onclick="this.classList.toggle('revealed')">isn’t the </span><span class="seed">dream</span>
+<span class="bury" onclick="this.classList.toggle('revealed')">that i have a mother to call
+and a table to eat breakfast at</span>
+
+<span class="bury" onclick="this.classList.toggle('revealed')">i learned to plant </span><span class="seed">seeds</span><span class="bury" onclick="this.classList.toggle('revealed')"> in the ground and
+expect </span><span class="seed">flowers</span><span class="bury" onclick="this.classList.toggle('revealed')"> to grow the next day</span>
+
+<span class="bury" onclick="this.classList.toggle('revealed')">but </span><span class="seed">magic</span>
+<span class="bury" onclick="this.classList.toggle('revealed')">doesn’t work like that
+</span><span class="seed">magic</span><span class="bury" onclick="this.classList.toggle('revealed')"> doesn’t happen
+cause i’ve figured out how to pack more work in a day
+</span><span class="seed">magic moves by the laws of nature</span> 
+<span class="bury" onclick="this.classList.toggle('revealed')">and nature has its own clock
+</span><span class="seed">magic happens when we play</span>
+<span class="bury" onclick="this.classList.toggle('revealed')">when we escape
+when we </span><span class="seed">daydream</span><span class="bury" onclick="this.classList.toggle('revealed')"> and </span><span class="seed">imagine</span>
+<span class="bury" onclick="this.classList.toggle('revealed')">now that’s where everything with the power to
+actually fulfill us is waiting on its knees for us</span>
+    </main>
+
+</body>
+</html>
