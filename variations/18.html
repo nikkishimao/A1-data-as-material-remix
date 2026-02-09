@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 18 // Cadence: Rise and Fall</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #fff;    
+            font-family: "Courier New", monospace; 
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .back-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #444; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1000;
+        }
+        
+        .audit-header { 
+            border-bottom: 2px solid #fff; 
+            padding-bottom: 10px; 
+            width: calc(100% - 80px); 
+            position: fixed;
+            top: 80px;
+            left: 40px;
+            z-index: 1000;
+            background: #000;
+        }
+
+        .metric-id { 
+            float: right; 
+            font-weight: bold; 
+            border: 1px solid #fff; 
+            padding: 5px; 
+            font-size: 10px;
+        }
+
+        .rise-text {
+            position: absolute;
+            bottom: -100px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            opacity: 0;
+            animation: riseAnim 18s linear forwards;
+            color: #7f7f7f; 
+        }
+
+        @keyframes riseAnim {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            15% { opacity: 0.5; }
+            85% { opacity: 0.5; }
+            100% { transform: translateY(-120vh) rotate(0deg); opacity: 0; }
+        }
+
+        .fall-text {
+            position: absolute;
+            top: -100px;
+            width: 100%;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            animation: fallAnim 3.5s cubic-bezier(.47,0,.74,.71) forwards;
+            color: #fff;
+            letter-spacing: -1px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fallAnim {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(120vh); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Return Home</a>
+    
+    <div class="audit-header">
+        <span class="metric-id">RULE: CADENCE // UNIT: 18</span>
+        <h2 style="margin:0; letter-spacing:4px;">RISE AND FALL</h2>
+    </div>
+
+    <div id="stage"></div>
+
+    <script>
+        const riseLines = [
+            "isn’t the dream that i have a mother to call",
+            "and a table to eat breakfast at",
+            "i call my mother when i’m free",
+            "magic doesn’t work like that",
+            "magic doesn’t happen cause i’ve figured it out",
+            "magic moves by the laws of nature",
+            "and nature has its own clock",
+            "magic happens when we play",
+            "when we escape",
+            "when we daydream and imagine",
+            "waiting on its knees for us"
+        ];
+
+        const fallLines = [
+            "I HAVE THIS PRODUCTIVITY ANXIETY",
+            "WORKING HARDER THAN ME",
+            "LEFT BEHIND",
+            "NOT WORKING FAST ENOUGH",
+            "WASTING MY TIME",
+            "I TAKE IT TO GO",
+            "OTHERWISE IT TAKES TOO LONG",
+            "OPTIMISE EVERY HOUR",
+            "IMPROVING IN SOME WAY",
+            "MAKING MONEY",
+            "ADVANCING MY CAREER",
+            "I EXCAVATE MY LIFE",
+            "PACKAGE IT UP",
+            "SELL IT TO THE WORLD",
+            "I DIG THROUGH BONES",
+            "CAPITALISM GOT INSIDE MY HEAD",
+            "MY ONLY VALUE IS HOW MUCH I PRODUCE",
+            "I’M OF WORTH AS LONG AS I AM WORKING",
+            "I LEARNED IMPATIENCE",
+            "EXPECT FLOWERS TO GROW THE NEXT DAY"
+        ];
+
+        const stage = document.getElementById('stage');
+        let rIdx = 0;
+        let fIdx = 0;
+
+        function triggerRise() {
+            const el = document.createElement('div');
+            el.className = 'rise-text';
+            el.innerText = riseLines[rIdx];
+            stage.appendChild(el);
+            
+            setTimeout(() => el.remove(), 18000);
+            rIdx = (rIdx + 1) % riseLines.length;
+            setTimeout(triggerRise, 3800); 
+        }
+
+        function triggerFall() {
+            const el = document.createElement('div');
+            el.className = 'fall-text';
+            el.innerText = fallLines[fIdx];
+            stage.appendChild(el);
+
+            setTimeout(() => el.remove(), 4000);
+            fIdx = (fIdx + 1) % fallLines.length;
+            setTimeout(triggerFall, 1400); 
+        }
+
+        setTimeout(triggerRise, 1000);
+        setTimeout(triggerFall, 2000);
+    </script>
+</body>
+</html>

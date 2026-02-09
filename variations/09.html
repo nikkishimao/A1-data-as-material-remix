@@ -5,29 +5,33 @@
     <title>Unit 09 // Tension: Collision</title>
     <style>
         body { 
-            background: #000; 
-            color: #fff; 
+            background: #fff; 
+            color: #000; 
             font-family: "Courier New", monospace; 
             padding: 40px; 
+            margin: 0;
         }
 
         .back-link { 
             font-size: 10px; 
             text-decoration: none; 
-            color: #fff; 
+            color: #ccc; 
             text-transform: uppercase; 
             letter-spacing: 2px;
+            display: block;
+            margin-bottom: 20px;
         }
         
         .audit-header { 
-            border-bottom: 2px solid #fff; 
-            margin-bottom: 60px; 
+            border-bottom: 2px solid #000; 
+            margin-bottom: 80px; 
             padding-bottom: 10px; 
             margin-top: 20px;
+            width: 100%;
         }
         
         .audit-header h2 { 
-            color: #fff; 
+            color: #000; 
             margin: 0; 
             letter-spacing: 4px;
             font-size: 24px;
@@ -36,67 +40,53 @@
         .metric-id { 
             float: right; 
             font-weight: bold; 
-            border: 1px solid #fff; 
+            border: 1px solid #000; 
             padding: 5px; 
             font-size: 10px;
         }
 
-        .hint { 
-            text-align: center; 
-            color: #fff; 
-            font-size: 10px; 
-            letter-spacing: 2px; 
-            margin-bottom: 60px; 
-            text-transform: uppercase; 
-        }
-
-        /* --- THE TYPOGRAPHY: COLLISION --- */
         .poem-content {
             white-space: pre-line;
             max-width: 800px;
             margin: 0 auto;
             
-            /* Initial state: The Crash */
-            font-size: 30px; 
+            font-size: 32px; 
             font-weight: 900;
             text-transform: uppercase;
-            line-height: 0.45; 
-            letter-spacing: -1px;
+            line-height: 0.42; 
+            letter-spacing: -2px;
             
-            color: #fff;
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            color: #000;
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: crosshair;
         }
 
-        /* The Action: Relieving the tension */
         .poem-content:hover {
             line-height: 1.5;
             font-size: 18px;
             font-weight: 400;
             text-transform: none;
             letter-spacing: 0px;
+            color: #333; 
         }
 
-        /* Spacing between the "jagged blocks" */
         .stanza {
-            margin-bottom: 15px; /* Keeps them crushed but distinct */
-            transition: margin 0.8s ease;
+            margin-bottom: 12px; 
+            transition: margin 0.9s ease;
         }
 
         .poem-content:hover .stanza {
-            margin-bottom: 40px; /* Expands to healthy reading space */
+            margin-bottom: 40px; 
         }
     </style>
 </head>
 <body>
-    <a href="../index.html" class="back-link">← Return to Audit Log</a>
-    
+    <a href="../index.html" class="back-link">← Return Home</a>
+      
     <div class="audit-header">
-        <span class="metric-id">METRIC: TENSION // UNIT: 09</span>
+        <span class="metric-id">RULE: TENSION // UNIT: 09</span>
         <h2>COLLISION</h2>
     </div>
-
-    <p class="hint">[ ACTION: HOVER TO RELIEVE PRESSURE ]</p>
 
     <main class="poem-content">
         <div class="stanza">i have this productivity anxiety
@@ -119,7 +109,7 @@
         that i have a mother to call
         and a table to eat breakfast at</div>
 
-        <div class="stanza">instead i’m lost in the sick need to 
+        <div class="stanza">instead i’m lost in the sick need to 
         optimise every hour of my day
         so i’m improving in some way
         making money in some way
@@ -142,7 +132,7 @@
         i’m of worth as long as i am working</div>
 
         <div class="stanza">i learned impatience from it
-        i learned self-doubt from it 
+        i learned self-doubt from it 
         i learned to plant seeds in the ground and
         expect flowers to grow the next day</div>
 
@@ -150,7 +140,7 @@
         doesn’t work like that
         magic doesn’t happen
         cause i’ve figured out how to pack more work in a day
-        magic moves by the laws of nature 
+        magic moves by the laws of nature 
         and nature has its own clock
         magic happens when we play
         when we escape

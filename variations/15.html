@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 15 // Arrangement: The Vortex</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #fff; 
+            font-family: "Courier New", monospace; 
+            padding: 80px 40px; 
+            line-height: 1.4;
+            overflow: hidden; 
+            height: 100vh;
+        }
+
+        .back-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #444; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1000;
+        }
+        
+        .audit-header { 
+            border-bottom: 2px solid #fff; 
+            margin-bottom: 80px; 
+            padding-bottom: 10px; 
+            width: 100%; 
+            position: relative;
+            z-index: 100;
+        }
+        
+        .audit-header h2 { 
+            margin: 0; 
+            letter-spacing: 4px; 
+            font-size: 24px;
+        }
+
+        .metric-id { 
+            float: right; 
+            font-weight: bold; 
+            border: 1px solid #fff; 
+            padding: 5px; 
+            font-size: 10px;
+        }
+
+        #vortex-field {
+            width: 100%;
+            height: calc(100vh - 280px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        svg {
+            width: 92vmin; 
+            height: 92vmin;
+            animation: rotate-spiral 120s linear infinite;
+        }
+
+        @keyframes rotate-spiral {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        text {
+            fill: #fff;
+            font-size: 9px;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        #spiral-text {
+            animation: flow-text 160s linear infinite;
+        }
+
+        @keyframes flow-text {
+            from { startOffset: 0%; }
+            to { startOffset: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Return Home</a>
+    
+    <div class="audit-header">
+        <span class="metric-id">RULE: ARRANGEMENT // UNIT: 15</span>
+        <h2>THE VORTEX</h2>
+    </div>
+
+    <div id="vortex-field">
+        <svg viewBox="0 0 1000 1000">
+            <defs>
+                <path id="spiralPath" d=""></path>
+            </defs>
+            <text>
+                <textPath id="spiral-text" xlink:href="#spiralPath">
+                    </textPath>
+            </text>
+        </svg>
+    </div>
+
+    <script>
+        const fullPoem = `i have this productivity anxiety that everyone else is working harder than me and i’m going to be left behind cause i’m not working fast enough and i’m wasting my time i don’t sit down to have breakfast i take it to go i call my mother when i’m free otherwise it takes too long i put off everything that won’t bring me closer to my dreams as if the things i’m putting off are not the dream themselves isn’t the dream that i have a mother and a table to eat breakfast at instead i’m lost in the sick need to optimise every hour of my day so i’m improving in some way making money in some way advancing my career in some way that’s what it takes to be successful i excavate my life package it up sell it to the world and when they ask me for more i dig through bones trying to write poems capitalism got inside my head and made me think my only value is how much i produce for people capitalism got inside my head made me think i’m of worth as long as i am working i learned impatience from it i learned self-doubt from it i learned to plant seeds expect flowers to grow the next day but magic doesn’t work like that magic doesn’t happen cause i figured out how to pack work magic moves by the laws of nature and nature has its own clock magic happens when we play when we escape when we daydream and imagine now that’s where everything with the power to fulfill us is waiting on its knees for us `;
+
+        document.getElementById('spiral-text').textContent = fullPoem.repeat(3);
+
+        function generateSpiralPath() {
+            const centerX = 500;
+            const centerY = 500;
+            
+            const loose = 7.2;      
+            const maxAngle = 62;   
+            const precision = 0.1; 
+            
+            let d = `M ${centerX} ${centerY}`;
+            
+            for (let theta = 0.1; theta < maxAngle; theta += precision) {
+                const r = loose * theta;
+                const x = centerX + r * Math.cos(theta);
+                const y = centerY + r * Math.sin(theta);
+                d += ` L ${x} ${y}`;
+            }
+            
+            document.getElementById('spiralPath').setAttribute('d', d);
+        }
+
+        generateSpiralPath();
+    </script>
+</body>
+</html>

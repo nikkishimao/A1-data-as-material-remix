@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 13 // Arrangement: The Grid</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #fff; 
+            font-family: "Courier New", monospace; 
+            padding: 80px 40px; 
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        .back-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #444; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1000;
+        }
+        
+        .audit-header { 
+            border-bottom: 2px solid #fff; 
+            margin-bottom: 10px; 
+            padding-bottom: 10px; 
+            width: 100%; 
+            position: relative;
+            z-index: 100;
+        }
+        
+        .audit-header h2 { 
+            margin: 0; 
+            letter-spacing: 4px; 
+            font-size: 24px;
+        }
+
+        .metric-id { 
+            float: right; 
+            font-weight: bold; 
+            border: 1px solid #fff; 
+            padding: 5px; 
+            font-size: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 1px; 
+            background: #333;
+            border: 1px solid #333;
+            margin-top: 20px;
+        }
+
+        .grid-cell {
+            padding: 30px;
+            font-size: 13px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: filter 0.3s ease;
+        }
+
+        .grid-cell:hover {
+            filter: brightness(1.5);
+            background: #111 !important; 
+        }
+
+        .grid-cell p {
+            margin: 0;
+            white-space: pre-line;
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Return Home</a>
+    
+    <div class="audit-header">
+        <span class="metric-id">RULE: ARRANGEMENT // UNIT: 13</span>
+        <h2>THE GRID</h2>
+    </div>
+
+    <main class="grid-container" id="main-grid">
+        <div class="grid-cell"><p>i have this productivity anxiety
+        that everyone else is working harder than me
+        and i’m going to be left behind
+        cause i’m not working fast enough or long enough
+        and i’m wasting my time</p></div>
+
+        <div class="grid-cell"><p>i don’t sit down to have breakfast
+        i take it to go
+        i call my mother when i’m free
+        otherwise it takes too long to have a conversation</p></div>
+
+        <div class="grid-cell"><p>i put off everything that
+        won’t bring me closer to my dreams
+        as if the things i’m putting off
+        are not the dream themselves</p></div>
+
+        <div class="grid-cell"><p>isn’t the dream
+        that i have a mother to call
+        and a table to eat breakfast at</p></div>
+
+        <div class="grid-cell"><p>instead i’m lost in the sick need to 
+        optimise every hour of my day
+        so i’m improving in some way
+        making money in some way
+        advancing my career in some way</p></div>
+
+        <div class="grid-cell"><p>i excavate my life
+        package it up
+        sell it to the world
+        and when they ask me for more
+        i dig through bones
+        trying to write poems</p></div>
+
+        <div class="grid-cell"><p>capitalism got inside my head
+        and made me think my only value
+        is how much i produce
+        for people to consume</p></div>
+
+        <div class="grid-cell"><p>capitalism got inside my head and made me think
+        i’m of worth as long as i am working</p></div>
+
+        <div class="grid-cell"><p>i learned impatience from it
+        i learned self-doubt from it 
+        i learned to plant seeds in the ground and
+        expect flowers to grow the next day</p></div>
+
+        <div class="grid-cell"><p>but magic doesn’t work like that
+        magic doesn’t happen
+        cause i’ve figured out how to pack more work in a day</p></div>
+
+        <div class="grid-cell"><p>magic moves by the laws of nature 
+        and nature has its own clock
+        magic happens when we play
+        when we escape
+        when we daydream and imagine</p></div>
+
+        <div class="grid-cell"><p>now that’s where everything with the power to
+        actually fulfill us is waiting on its knees for us.</p></div>
+    </main>
+
+    <script>
+        // Apply random grayscales to the cells
+        const cells = document.querySelectorAll('.grid-cell');
+        cells.forEach(cell => {
+            // Generates a value between 5 and 25 for a dark-to-mid gray range
+            const grayValue = Math.floor(Math.random() * 20) + 5;
+            cell.style.backgroundColor = `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
+        });
+    </script>
+</body>
+</html>

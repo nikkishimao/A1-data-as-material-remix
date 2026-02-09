@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Unit 10 // Tension: Elongation</title>
+    <title>Unit 10 // Tension: STRETCHED</title>
     <style>
         body { 
             background: #000; 
@@ -15,7 +15,7 @@
         .back-link { 
             font-size: 10px; 
             text-decoration: none; 
-            color: #fff; 
+            color: #555; 
             text-transform: uppercase; 
             letter-spacing: 2px;
         }
@@ -45,51 +45,40 @@
             text-align: center; 
             font-size: 10px; 
             letter-spacing: 2px; 
-            margin-bottom: 60px; 
+            margin-bottom: 80px; 
             text-transform: uppercase; 
+            color: #444;
         }
 
-        /* --- THE TYPOGRAPHY: ELONGATION --- */
         .poem-content {
             white-space: pre-line;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
             
-            /* The Stretch: Distorting the actual letter shapes */
             display: block;
-            transform: scaleX(3); /* Stretches text to 3x width */
+            transform: scaleX(3.5);
             letter-spacing: 2px; 
-            font-size: 14px; 
-            line-height: 2.5;
+            font-size: 13px; 
+            line-height: 2.8;
+            color: #fff;
             
-            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-            cursor: pointer;
+            pointer-events: none;
             transform-origin: center;
         }
 
-        /* The Action: Returning to original state */
-        .poem-content:hover {
-            transform: scaleX(1); /* Snaps back to 100% width */
-            letter-spacing: 0px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
         .stanza {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
     </style>
 </head>
 <body>
-    <a href="../index.html" class="back-link">← Return to Audit Log</a>
+    <a href="../index.html" class="back-link">← Return Home</a>
     
     <div class="audit-header">
-        <span class="metric-id">METRIC: TENSION // UNIT: 10</span>
-        <h2>ELONGATION</h2>
+        <span class="metric-id">RULE: TENSION // UNIT: 10</span>
+        <h2>STRETCHED</h2>
     </div>
-
-    <p class="hint">[ ACTION: HOVER TO CONTAIN ]</p>
 
     <main class="poem-content">
         <div class="stanza">i have this productivity anxiety

@@ -3,177 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Performance: Productivity Anxiety</title>
+    <title>Productivity Anxiety // Index</title>
     <style>
-        body {
+        html, body {
+            height: 100%;
             margin: 0;
-            background-color: #f4f4f4; /* Clinical grey-white */
-            color: #1a1a1a;
+            overflow: hidden; 
+            background-color: #fff;
+            color: #000;
             font-family: "Courier New", Courier, monospace;
-            padding: 40px;
         }
 
-        /* --- THE LOG BOOK CONTAINER --- */
-        .document-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 60px;
-            border: 1px solid #ddd;
-            box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+        body {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            box-sizing: border-box;
         }
 
         header {
-            border-bottom: 2px solid black;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-
-        .status-box {
-            float: right;
-            border: 2px solid black;
-            padding: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* --- THE RULES AS "METRICS" --- */
-        .metric-section {
-            margin-bottom: 60px;
-            border-left: 5px solid #eee;
-            padding-left: 20px;
-            transition: border-color 0.3s;
-        }
-
-        .metric-section:hover {
-            border-left: 5px solid black;
-        }
-
-        .metric-label {
-            font-size: 12px;
-            color: #888;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .metric-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .poem-insight {
-            font-style: italic;
+            flex: 0 0 auto;
+            border-bottom: 2px solid #000;
             margin-bottom: 20px;
-            font-size: 14px;
-            color: #444;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }
 
-        /* --- THE VARIATIONS (THE WORK UNITS) --- */
-        .work-grid {
+        h1 {
+            margin: 0;
+            letter-spacing: 4px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .author-tag {
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* --- THE FLUSH GRID --- */
+        .master-container {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .row-wrapper {
+            display: flex;
+            flex: 1; 
+            align-items: stretch;
+        }
+
+        .rule-label {
+            width: 180px; 
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 25px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-align: right;
+            border-bottom: 1px solid transparent;
+        }
+
+        .unit-row {
+            flex: 1;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            border-top: 1px solid #000;
         }
 
-        .variation-link {
-            display: block;
-            text-align: center;
-            border: 1px solid #ccc;
-            padding: 10px;
+        .row-wrapper:last-child .unit-row {
+            border-bottom: 1px solid #000;
+        }
+
+        .unit-box {
+            border-right: 1px solid #000;
+            border-left: 1px solid #000;
+            margin-left: -1px; 
             text-decoration: none;
-            color: black;
-            font-size: 12px;
-            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+            position: relative;
         }
 
-        .variation-link:hover {
-            background: black;
-            color: white;
-            border-color: black;
+        .unit-box:hover {
+            z-index: 10;
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(0,0,0,0.2);
+            outline: 1px solid #000;
         }
+
+        .unit-box { background-color: #fff; color: #000; }
+
+        .row-wrapper:nth-child(odd) .unit-box:nth-child(even) { background-color: #000; color: #fff; }
+        .row-wrapper:nth-child(even) .unit-box:nth-child(odd) { background-color: #000; color: #fff; }
+
+        .unit-number { font-size: 9px; font-weight: bold; margin-bottom: 4px; opacity: 0.6; }
+        .unit-name { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; padding: 0 5px; }
 
         footer {
-            margin-top: 100px;
-            font-size: 10px;
+            flex: 0 0 auto;
+            margin-top: 20px;
+            font-size: 9px;
             text-align: center;
-            opacity: 0.5;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <div class="document-wrapper">
-        <div class="status-box">Status: Working</div>
-        <header>
-            <h1>SELF VALUE AUDIT</h1>
-            <p>Subject: Productivity Anxiety // Rupi Kaur</p>
-        </header>
+    <header>
+        <h1>Productivity Anxiety</h1>
+        <div class="author-tag">BY RUPI KAUR</div>
+    </header>
 
-        <div class="metric-section">
-            <span class="metric-label">Metric 01 // Visibility</span>
-            <div class="metric-title">The Unearthing of Worth</div>
-            <p class="poem-insight">"i have this productivity anxiety / that everyone else is working harder than me"</p>
-            <div class="work-grid">
-                <a href="variations/01.html" class="variation-link">Unit 01</a>
-                <a href="variations/02.html" class="variation-link">Unit 02</a>
-                <a href="variations/03.html" class="variation-link">Unit 03</a>
-                <a href="variations/04.html" class="variation-link">Unit 04</a>
+    <main class="master-container">
+
+        <div class="row-wrapper">
+            <div class="rule-label">Visibility</div>
+            <div class="unit-row">
+                <a href="variations/01.html" class="unit-box"><span class="unit-number">01</span><span class="unit-name">The Fog</span></a>
+                <a href="variations/02.html" class="unit-box"><span class="unit-number">02</span><span class="unit-name">Veiled Compression</span></a>
+                <a href="variations/03.html" class="unit-box"><span class="unit-number">03</span><span class="unit-name">Phasing Out</span></a>
+                <a href="variations/04.html" class="unit-box"><span class="unit-number">04</span><span class="unit-name">Redaction</span></a>
             </div>
         </div>
 
-        <div class="metric-section">
-            <span class="metric-label">Metric 02 // Repetition</span>
-            <div class="metric-title">The Loop of Optimization</div>
-            <p class="poem-insight">"instead i’m lost in the sick need to / optimise every hour of my day"</p>
-            <div class="work-grid">
-                <a href="variations/05.html" class="variation-link">Unit 05</a>
-                <a href="variations/06.html" class="variation-link">Unit 06</a>
-                <a href="variations/07.html" class="variation-link">Unit 07</a>
-                <a href="variations/08.html" class="variation-link">Unit 08</a>
+        <div class="row-wrapper">
+            <div class="rule-label">Repetition</div>
+            <div class="unit-row">
+                <a href="variations/05.html" class="unit-box"><span class="unit-number">05</span><span class="unit-name">Echoes</span></a>
+                <a href="variations/06.html" class="unit-box"><span class="unit-number">06</span><span class="unit-name">The Loop</span></a>
+                <a href="variations/07.html" class="unit-box"><span class="unit-number">07</span><span class="unit-name">Run-on</span></a>
+                <a href="variations/08.html" class="unit-box"><span class="unit-number">08</span><span class="unit-name">Structured Saturation</span></a>
             </div>
         </div>
 
-        <div class="metric-section">
-            <span class="metric-label">Metric 03 // Tension</span>
-            <div class="metric-title">The Pressure to Produce</div>
-            <p class="poem-insight">"capitalism got inside my head / and made me think my only value / is how much i produce"</p>
-            <div class="work-grid">
-                <a href="variations/09.html" class="variation-link">Unit 09</a>
-                <a href="variations/10.html" class="variation-link">Unit 10</a>
-                <a href="variations/11.html" class="variation-link">Unit 11</a>
-                <a href="variations/12.html" class="variation-link">Unit 12</a>
+        <div class="row-wrapper">
+            <div class="rule-label">Tension</div>
+            <div class="unit-row">
+                <a href="variations/09.html" class="unit-box"><span class="unit-number">09</span><span class="unit-name">Collision</span></a>
+                <a href="variations/10.html" class="unit-box"><span class="unit-number">10</span><span class="unit-name">Stretched</span></a>
+                <a href="variations/11.html" class="unit-box"><span class="unit-number">11</span><span class="unit-name">Interruption</span></a>
+                <a href="variations/12.html" class="unit-box"><span class="unit-number">12</span><span class="unit-name">Imbalance</span></a>
             </div>
         </div>
 
-        <div class="metric-section">
-            <span class="metric-label">Metric 04 // Fragmentation</span>
-            <div class="metric-title">Packaging the Life</div>
-            <p class="poem-insight">"i excavate my life / package it up / sell it to the world"</p>
-            <div class="work-grid">
-                <a href="variations/13.html" class="variation-link">Unit 13</a>
-                <a href="variations/14.html" class="variation-link">Unit 14</a>
-                <a href="variations/15.html" class="variation-link">Unit 15</a>
-                <a href="variations/16.html" class="variation-link">Unit 16</a>
+        <div class="row-wrapper">
+            <div class="rule-label">Arrangement</div>
+            <div class="unit-row">
+                <a href="variations/13.html" class="unit-box"><span class="unit-number">13</span><span class="unit-name">The Grid</span></a>
+                <a href="variations/14.html" class="unit-box"><span class="unit-number">14</span><span class="unit-name">Scatter + Manual Assembly</span></a>
+                <a href="variations/15.html" class="unit-box"><span class="unit-number">15</span><span class="unit-name">The Vortex</span></a>
+                <a href="variations/16.html" class="unit-box"><span class="unit-number">16</span><span class="unit-name">Lateral</span></a>
             </div>
         </div>
 
-        <div class="metric-section">
-            <span class="metric-label">Metric 05 // Movement</span>
-            <div class="metric-title">The Clock of Nature</div>
-            <p class="poem-insight">"magic moves by the laws of nature / and nature has its own clock"</p>
-            <div class="work-grid">
-                <a href="variations/17.html" class="variation-link">Unit 17</a>
-                <a href="variations/18.html" class="variation-link">Unit 18</a>
-                <a href="variations/19.html" class="variation-link">Unit 19</a>
-                <a href="variations/20.html" class="variation-link">Unit 20</a>
+        <div class="row-wrapper">
+            <div class="rule-label">Cadence</div>
+            <div class="unit-row">
+                <a href="variations/17.html" class="unit-box"><span class="unit-number">17</span><span class="unit-name">The Metronome</span></a>
+                <a href="variations/18.html" class="unit-box"><span class="unit-number">18</span><span class="unit-name">Rise and Fall</span></a>
+                <a href="variations/19.html" class="unit-box"><span class="unit-number">19</span><span class="unit-name">Fast Reader</span></a>
+                <a href="variations/20.html" class="unit-box"><span class="unit-number">20</span><span class="unit-name">Flow</span></a>
             </div>
         </div>
 
-        <footer>
-            CONFIDENTIAL // DO NOT STOP WORKING // SUCCESS IS OUTPUT
-        </footer>
-    </div>
+    </main>
+
 </body>
 </html>

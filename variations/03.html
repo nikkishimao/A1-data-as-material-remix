@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Unit 03 // Visibility: Phasing</title>
+    <title>Unit 03 // Visibility: Phasing Out</title>
     <style>
-        /* White Background for the 'Sterile' Audit look */
         body { 
             background: #fff; 
             color: #000; 
@@ -60,20 +59,17 @@
             line-height: 1.8;
         }
 
-        /* Work: Solid, heavy, permanent */
         .work { 
             opacity: 1; 
             font-weight: 900;
             color: #000;
         }
 
-        /* Human: Glitching/Flashing out of existence */
         .human { 
             font-weight: 100;
-            animation: glitch 4s infinite; /* Slow, ghostly flickering */
+            animation: glitch 4s infinite;
         }
 
-        /* The Glitch Animation */
         @keyframes glitch {
             0%, 100% { opacity: 0.1; }
             5% { opacity: 0.8; }
@@ -85,7 +81,6 @@
             54% { opacity: 0.1; }
         }
 
-        /* Hover restores them to full strength */
         .human:hover { 
             opacity: 1 !important;
             animation: none;
@@ -95,14 +90,12 @@
     </style>
 </head>
 <body>
-    <a href="../index.html" class="back-link">← Return to Audit Log</a>
+    <a href="../index.html" class="back-link">← Return Home</a>
     
     <div class="audit-header">
-        <span class="metric-id">METRIC: VISIBILITY // UNIT: 03</span>
-        <h2>PHASING</h2>
+        <span class="metric-id">RULE: VISIBILITY // UNIT: 03</span>
+        <h2>PHASING OUT</h2>
     </div>
-
-    <p class="hint">[ ACTION: HOVER TO STABILIZE ]</p>
 
     <main class="poem-content">
         i have this <span class="work">productivity anxiety</span>
