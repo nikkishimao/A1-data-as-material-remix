@@ -187,10 +187,8 @@
     </main>
 
     <script>
-        // Apply random grayscales to the cells
         const cells = document.querySelectorAll('.grid-cell');
         cells.forEach(cell => {
-            // Generates a value between 5 and 25 for a dark-to-mid gray range
             const grayValue = Math.floor(Math.random() * 20) + 5;
             cell.style.backgroundColor = `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
         });
