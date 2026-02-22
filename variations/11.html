@@ -8,36 +8,68 @@
             background: #fff; 
             color: #000; 
             font-family: "Courier New", monospace; 
-            padding: 40px; 
             margin: 0;
-            line-height: 2.8; 
-            overflow-x: hidden;
+            padding: 0;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .back-link { 
+                .back-link { 
             font-size: 10px; 
             text-decoration: none; 
-            color: #ccc; 
+            color: #888; 
             text-transform: uppercase; 
             letter-spacing: 2px;
-            display: block;
-            margin-bottom: 20px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 100;
         }
         
-        .audit-header { 
+        .nav-container { 
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex; 
+            gap: 10px;
+            align-items: center; 
+            z-index: 100;
+        }
+        
+        .nav-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #888; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+        }
+        
+        .nav-link:hover { 
+            color: #000; 
+        }
+        
+        .nav-separator {
+            color: #888;
+            font-size: 10px;
+        }
+                .audit-header { 
             border-bottom: 2px solid #000; 
-            margin-bottom: 80px; 
-            padding-bottom: 10px; 
-            margin-top: 20px;
-            width: 100%;
-            position: relative; 
+            margin-top: 100px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px; 
+            padding-bottom: 10px;
+            padding-left: 0;
+            padding-right: 0;
         }
         
         .audit-header h2 { 
             color: #000; 
             margin: 0; 
             letter-spacing: 4px;
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .metric-id { 
@@ -46,7 +78,9 @@
             border: 1px solid #000; 
             padding: 5px; 
             font-size: 10px;
+            color: #000;
         }
+        
 
         .poem-content {
             max-width: 900px;
@@ -86,7 +120,13 @@
 <body>
     <a href="../index.html" class="back-link">← Return Home</a>
     
-    <div class="audit-header">
+    <div class="nav-container">
+        <a href="10.html" class="nav-link">← Prev</a>
+        <span class="nav-separator">|</span>
+        <a href="12.html" class="nav-link">Next →</a>
+    </div>
+    
+<div class="audit-header">
         <span class="metric-id">RULE: TENSION // UNIT: 11</span>
         <h2>INTERRUPTION</h2>
     </div>

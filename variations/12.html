@@ -3,45 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Unit 12 // Tension: Imbalance</title>
-    <style>
+<style>
         body { 
-            background: #000000; 
-            color: #ffffff; 
+            background: #000; 
+            color: #fff;    
             font-family: "Courier New", monospace; 
-            padding: 40px; 
-            line-height: 1.3;
-            overflow-x: hidden;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: auto;
         }
 
-        .back-link { 
+                .back-link { 
             font-size: 10px; 
             text-decoration: none; 
-            color: #888; 
+            color: #fff; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 100;
+        }
+        
+        .nav-container { 
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex; 
+            gap: 10px;
+            align-items: center; 
+            z-index: 100;
+        }
+        
+        .nav-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #fff; 
             text-transform: uppercase; 
             letter-spacing: 2px;
         }
         
-        .audit-header { 
-            border-bottom: 2px solid #ffffff; 
-            margin-bottom: 80px; 
-            padding-bottom: 10px; 
-            margin-top: 20px;
-            width: 100%; 
+        .nav-link:hover { 
+            color: #888; 
+        }
+        
+        .nav-separator {
+            color: #fff;
+            font-size: 10px;
+        }
+                .audit-header { 
+            border-bottom: 2px solid #fff; 
+            margin-top: 100px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px; 
+            padding-bottom: 10px;
+            padding-left: 0;
+            padding-right: 0;
         }
         
         .audit-header h2 { 
+            color: #fff; 
             margin: 0; 
-            letter-spacing: 4px; 
-            font-size: 24px;
+            letter-spacing: 4px;
+            font-size: 20px;
         }
 
         .metric-id { 
             float: right; 
             font-weight: bold; 
-            border: 1px solid #ffffff; 
+            border: 1px solid #fff; 
             padding: 5px; 
             font-size: 10px;
+            color: #fff;
         }
+        
 
         .poem-content {
             white-space: pre-line;
@@ -72,7 +108,13 @@
 <body>
     <a href="../index.html" class="back-link">← Return Home</a>
     
-    <div class="audit-header">
+    <div class="nav-container">
+        <a href="11.html" class="nav-link">← Prev</a>
+        <span class="nav-separator">|</span>
+        <a href="13.html" class="nav-link">Next →</a>
+    </div>
+    
+<div class="audit-header">
         <span class="metric-id">RULE: TENSION // UNIT: 12</span>
         <h2>IMBALANCE</h2>
     </div>

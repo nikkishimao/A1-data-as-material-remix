@@ -13,37 +13,63 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-y: auto;
         }
 
-        .back-link { 
+                .back-link { 
             font-size: 10px; 
             text-decoration: none; 
-            color: #ccc; 
+            color: #888; 
             text-transform: uppercase; 
             letter-spacing: 2px;
-            position: fixed;
+            position: absolute;
             top: 40px;
             left: 40px;
             z-index: 100;
         }
         
-        .audit-header { 
-            border-bottom: 2px solid #000; 
-            padding-bottom: 10px; 
-            width: calc(100% - 80px); 
-            position: fixed;
-            top: 80px;
-            left: 40px;
+        .nav-container { 
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex; 
+            gap: 10px;
+            align-items: center; 
             z-index: 100;
         }
         
+        .nav-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #888; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+        }
+        
+        .nav-link:hover { 
+            color: #000; 
+        }
+        
+        .nav-separator {
+            color: #888;
+            font-size: 10px;
+        }
+                .audit-header { 
+            border-bottom: 2px solid #000; 
+            position: absolute;
+            top: 100px;
+            left: 40px;
+            right: 40px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        
         .audit-header h2 { 
+            color: #000; 
             margin: 0; 
-            letter-spacing: 4px; 
-            font-size: 24px;
-            color: #000;
+            letter-spacing: 4px;
+            font-size: 20px;
         }
 
         .metric-id { 
@@ -54,6 +80,33 @@
             font-size: 10px;
             color: #000;
         }
+        
+        
+        
+
+        
+        
+        
+        
+
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
 
         #cadence-display {
             font-size: 10vw; 
@@ -67,10 +120,15 @@
     </style>
 </head>
 <body>
-
     <a href="../index.html" class="back-link">← Return Home</a>
     
-    <div class="audit-header">
+    <div class="nav-container">
+        <a href="16.html" class="nav-link">← Prev</a>
+        <span class="nav-separator">|</span>
+        <a href="18.html" class="nav-link">Next →</a>
+    </div>
+    
+<div class="audit-header">
         <span class="metric-id">RULE: CADENCE // UNIT: 17</span>
         <h2>THE METRONOME</h2>
     </div>

@@ -9,31 +9,64 @@
             color: #fff;    
             font-family: "Courier New", monospace; 
             margin: 0;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-y: auto;
         }
 
-        .back-link { 
+                .back-link { 
             font-size: 10px; 
             text-decoration: none; 
-            color: #444; 
+            color: #fff; 
             text-transform: uppercase; 
             letter-spacing: 2px;
-            position: fixed;
+            position: absolute;
             top: 40px;
             left: 40px;
-            z-index: 1000;
+            z-index: 100;
         }
         
-        .audit-header { 
+        .nav-container { 
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex; 
+            gap: 10px;
+            align-items: center; 
+            z-index: 100;
+        }
+        
+        .nav-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #fff; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+        }
+        
+        .nav-link:hover { 
+            color: #888; 
+        }
+        
+        .nav-separator {
+            color: #fff;
+            font-size: 10px;
+        }
+                .audit-header { 
             border-bottom: 2px solid #fff; 
-            padding-bottom: 10px; 
-            width: calc(100% - 80px); 
-            position: fixed;
-            top: 80px;
-            left: 40px;
-            z-index: 1000;
-            background: #000;
+            margin-top: 100px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px; 
+            padding-bottom: 10px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .audit-header h2 { 
+            color: #fff; 
+            margin: 0; 
+            letter-spacing: 4px;
+            font-size: 20px;
         }
 
         .metric-id { 
@@ -42,7 +75,9 @@
             border: 1px solid #fff; 
             padding: 5px; 
             font-size: 10px;
+            color: #fff;
         }
+    
 
         .rise-text {
             position: absolute;
@@ -84,12 +119,17 @@
     </style>
 </head>
 <body>
-
     <a href="../index.html" class="back-link">← Return Home</a>
     
-    <div class="audit-header">
+    <div class="nav-container">
+        <a href="17.html" class="nav-link">← Prev</a>
+        <span class="nav-separator">|</span>
+        <a href="19.html" class="nav-link">Next →</a>
+    </div>
+    
+<div class="audit-header">
         <span class="metric-id">RULE: CADENCE // UNIT: 18</span>
-        <h2 style="margin:0; letter-spacing:4px;">RISE AND FALL</h2>
+        <h2>RISE AND FALL</h2>
     </div>
 
     <div id="stage"></div>

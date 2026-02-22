@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Unit 04 // Visibility: Redaction</title>
-    <style>
+<style>
         body { 
             background: #000; 
-            color: #fff; 
+            color: #fff;    
             font-family: "Courier New", monospace; 
-            padding: 40px; 
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: auto;
         }
 
-        .back-link { 
+                .back-link { 
+            font-size: 10px; 
+            text-decoration: none; 
+            color: #fff; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 100;
+        }
+        
+        .nav-container { 
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex; 
+            gap: 10px;
+            align-items: center; 
+            z-index: 100;
+        }
+        
+        .nav-link { 
             font-size: 10px; 
             text-decoration: none; 
             color: #fff; 
@@ -19,18 +43,30 @@
             letter-spacing: 2px;
         }
         
-        .audit-header { 
+        .nav-link:hover { 
+            color: #888; 
+        }
+        
+        .nav-separator {
+            color: #fff;
+            font-size: 10px;
+        }
+                .audit-header { 
             border-bottom: 2px solid #fff; 
+            margin-top: 100px;
+            margin-left: 40px;
+            margin-right: 40px;
             margin-bottom: 40px; 
-            padding-bottom: 10px; 
-            margin-top: 20px;
+            padding-bottom: 10px;
+            padding-left: 0;
+            padding-right: 0;
         }
         
         .audit-header h2 { 
             color: #fff; 
             margin: 0; 
             letter-spacing: 4px;
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .metric-id { 
@@ -38,9 +74,11 @@
             font-weight: bold; 
             border: 1px solid #fff; 
             padding: 5px; 
-            color: #fff; 
             font-size: 10px;
+            color: #fff;
         }
+        
+
 
         .hint { 
             text-align: center; 
@@ -91,7 +129,13 @@
 <body>
     <a href="../index.html" class="back-link">← Return Home</a>
     
-    <div class="audit-header">
+    <div class="nav-container">
+        <a href="03.html" class="nav-link">← Prev</a>
+        <span class="nav-separator">|</span>
+        <a href="05.html" class="nav-link">Next →</a>
+    </div>
+    
+<div class="audit-header">
         <span class="metric-id">RULE: VISIBILITY // UNIT: 04</span>
         <h2>REDACTION</h2>
     </div>
